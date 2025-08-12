@@ -9,33 +9,37 @@
 </head>
 <body>
 
-  <form action="https://formspree.io/f/xeoznezr" method="POST">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+  <div class="form-container">
+    <h2>Formulário de Contato</h2>
+    <form action="https://formspree.io/f/xeoznezr" method="POST">
+      
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
 
-    <label for="assunto">Assunto:</label>
-    <select id="assunto" name="assunto" required>
-      <option value="" disabled selected>Selecione um assunto</option>
-      <option value="Problemas com a tv">Problemas com a tv</option>
-      <option value="Problemas com o celular">Problemas com o celular</option>
-      <option value="Problemas com o iptv">Problemas com o iptv</option>
-      <option value="Problemas com o computador">Problemas com o computador</option>
-      <option value="Problemas com o wifi">Problemas com o wifi</option>
-      <option value="Criar/Atualizar algo">Criar/Atualizar algo</option>
-      <option value="Outro">Outro</option>
-    </select>
+      <label for="assunto">Assunto:</label>
+      <select id="assunto" name="assunto" required>
+        <option value="" disabled selected>Selecione um assunto</option>
+        <option value="Problemas com a tv">Problemas com a tv</option>
+        <option value="Problemas com o celular">Problemas com o celular</option>
+        <option value="Problemas com o iptv">Problemas com o iptv</option>
+        <option value="Problemas com o computador">Problemas com o computador</option>
+        <option value="Problemas com o wifi">Problemas com o wifi</option>
+        <option value="Criar/Atualizar algo">Criar/Atualizar algo</option>
+        <option value="Outro">Outro</option>
+      </select>
 
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-    <!-- Proteção contra spam -->
-    <input type="text" name="_gotcha" style="display:none">
+      <!-- Proteção contra spam -->
+      <input type="text" name="_gotcha" style="display:none">
 
-    <button type="submit">Enviar</button>
-  </form>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 
 </body>
 </html>
