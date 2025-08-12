@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Contato</title>
+  <!-- Link para o CSS externo -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,16 @@
     <input type="email" id="email" name="email" required>
 
     <label for="assunto">Assunto:</label>
-    <input type="text" id="assunto" name="assunto" required>
+    <select id="assunto" name="assunto" required>
+      <option value="" disabled selected>Selecione um assunto</option>
+      <option value="Problemas com a tv">Suporte Técnico</option>
+      <option value="Problemas com o celular">Financeiro</option>
+      <option value="Problemas com o iptv">Dúvidas Gerais</option>
+      <option value="Problemas com o computador">Sugestões</option>
+      <option value="Problemas com o wifi">Sugestões</option>
+      <option value="Criar/Atualizar algo">Sugestões</option>
+      <option value="Outro">Outro</option>
+    </select>
 
     <label for="mensagem">Mensagem:</label>
     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
