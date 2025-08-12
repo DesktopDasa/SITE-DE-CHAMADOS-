@@ -2,62 +2,74 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Contato</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="form-container">
-    <h2>Formulário de Contato</h2>
+  <form action="https://formspree.io/f/xeoznezr" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-    <form action="https://formsubmit.co/davidsonsantana4524@gmail.com" method="POST">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+    <label for="assunto">Assunto:</label>
+    <input type="text" id="assunto" name="assunto" required>
 
-      <label for="assunto">Assunto:</label>
-      <select id="assunto" name="assunto" required>
-        <option value="">Selecione...</option>
-        <option value="erro">Problemas com a tv</option>
-        <option value="acesso">Problemas com Iptv</option>
-        <option value="pagamento">Problemas com celular</option>
-        <option value="sugestao">Problemas com o computador</option>
-        <option value="problemas">Criação de algo ou ajuste</option>
-        <option value="outro">Outro</option>
-      </select>
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-      <div id="outro-assunto" style="display: none;">
-        <label for="assunto-outro">Descreva o assunto:</label>
-        <input type="text" id="assunto-outro" name="assunto-outro">
-      </div>
+    <!-- Proteção contra spam -->
+    <input type="text" name="_gotcha" style="display:none">
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" required></textarea>
-
-      <!-- Campos ocultos -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-
-  <script>
-    const assuntoSelect = document.getElementById('assunto');
-    const outroAssuntoDiv = document.getElementById('outro-assunto');
-
-    assuntoSelect.addEventListener('change', function () {
-      if (this.value === 'outro') {
-        outroAssuntoDiv.style.display = 'block';
-        document.getElementById('assunto-outro').required = true;
-      } else {
-        outroAssuntoDiv.style.display = 'none';
-        document.getElementById('assunto-outro').required = false;
-      }
-    });
-  </script>
+    <button type="submit">Enviar</button>
+  </form>
 
 </body>
 </html>
