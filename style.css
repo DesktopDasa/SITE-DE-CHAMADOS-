@@ -1,29 +1,33 @@
-/* Fundo com gradiente azul para roxo */
+/* 🌈 Fundo com gradiente azul para roxo */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #cce0ff, #e6ccff);
   padding: 40px;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Caixa do formulário */
+/* 🧾 Caixa do formulário */
 .form-container {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
-  margin: auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Título dentro da caixa */
+/* 🟣 Título dentro da caixa */
 .form-container h2 {
   text-align: center;
   color: #663399;
   margin-bottom: 20px;
 }
 
-/* Rótulos */
+/* 🏷️ Rótulos */
 label {
   display: block;
   margin-top: 15px;
@@ -31,8 +35,10 @@ label {
   color: #333;
 }
 
-/* Campos */
-input, select, textarea {
+/* ✏️ Campos de entrada */
+input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -43,19 +49,19 @@ input, select, textarea {
   background-color: #f9f9f9;
 }
 
-/* Select */
+/* 🔽 Select personalizado */
 select {
   appearance: none;
   cursor: pointer;
 }
 
-/* Textarea */
+/* 📝 Textarea ajustável */
 textarea {
   resize: vertical;
   height: 100px;
 }
 
-/* Botão */
+/* 📩 Botão de envio */
 button {
   margin-top: 20px;
   background-color: #663399;
@@ -66,25 +72,34 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #5a2d85;
 }
 
-/* Campo extra */
+/* 🧩 Campo extra oculto */
 #outro-assunto {
   display: none;
 }
-/* Responsividade para telas menores */
+
+/* 📱 Responsividade para telas menores */
 @media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
   .form-container {
     padding: 20px;
     border-radius: 8px;
     box-shadow: none;
   }
 
-  input, select, textarea, button {
+  input,
+  select,
+  textarea,
+  button {
     font-size: 15px;
     padding: 10px;
   }
@@ -94,7 +109,7 @@ button:hover {
   }
 }
 
-/* Responsividade para telas muito grandes (TVs) */
+/* 🖥️ Responsividade para telas muito grandes (TVs) */
 @media (min-width: 1200px) {
   .form-container {
     max-width: 600px;
