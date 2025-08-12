@@ -1,7 +1,7 @@
 /* 🌈 Fundo com gradiente azul para roxo */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #cce0ff, #9896ff);
+  background: linear-gradient(to right, #cce0ff, #3b38c1);
   padding: 40px;
   margin: 0;
   display: flex;
@@ -23,7 +23,7 @@ body {
 /* 🟣 Título dentro da caixa */
 .form-container h2 {
   text-align: center;
-  color: #663399;
+  color: #4256ee;
   margin-bottom: 20px;
 }
 
@@ -76,7 +76,7 @@ button {
 }
 
 button:hover {
-  background-color: #5a2d85;
+  background-color: #33996b;
 }
 
 /* 🧩 Campo extra oculto */
